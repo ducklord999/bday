@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        #message {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #555;
+        }
+        #time {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e91e63;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, My Love! 🎉</h1>
+        <p id="message">“were off to a land where the cold winds blow,<br>
+        Where reindeer roam and the northern lights glow.<br>
+        With fika and fun, I’ll wander and see—<br>
+        Guess who’s traveling across the sea?”</p>
+        <p id="time">Be ready at 9:15 AM at my house! 🏠</p>
+        <button onclick="revealHint()">Click for a Hint</button>
+    </div>
+    
+    <script>
+        const hints = [
+            "We'll be walking a lot, so wear comfy shoes! 👟",
+            "There will be delicious food involved! 🍽️",
+            "werae a casual outfit, ❤️❤️❤️",
+            "We could get lost in a maze... but it'll be fun! 😆",
+            "Just be ready for an adventure with me! ❤️"
+        ];
+        
+        let index = 0;
+        function revealHint() {
+            if (index < hints.length) {
+                document.getElementById("message").innerText = hints[index];
+                index++;
+            } else {
+                document.getElementById("message").innerText = "That's all the hints! Just be excited and ready! 💕";
+            }
+        }
+    </script>
+</body>
+</html>
